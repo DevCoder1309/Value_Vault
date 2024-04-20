@@ -32,7 +32,7 @@ const Login = ({ users }) => {
 
     if (foundUser) {
       setIsLoggedIn(true);
-      localStorage.setItem('isAuthenticated', 'true'); // Store authentication status
+      localStorage.setItem('isAuthenticated', 'true'); 
     } else {
       console.log('Invalid username or password');
     }
