@@ -6,6 +6,7 @@ const Home = () => {
   const [productName, setProductName] = useState('');
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [sortOption, setSortOption] = useState('');
 
   const generateRandomPrice = () => {
     return (Math.random() * 100).toFixed(2);
@@ -15,7 +16,7 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${productName}&page_size=10&json=true`);
+      const response = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${productName}&page_size=30&json=true`);
       const data = await response.json();
 
       const productResults = data.products.map(product => ({
@@ -24,6 +25,11 @@ const Home = () => {
         imageUrl: product.image_url,
         price: product.price || generateRandomPrice(), 
       }));
+
+      // Apply sorting if sortOption is selected
+      if (sortOption === 'price') {
+        productResults.sort((a, b) => a.price - b.price);
+      }
 
       setProducts(productResults);
     } catch (error) {
@@ -46,6 +52,10 @@ const Home = () => {
         <button onClick={handleSearch} disabled={loading}>
           {loading ? 'Searching...' : 'Search'}
         </button>
+        <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+          <option value="">Sort by</option>
+          <option value="price">Price</option>
+        </select>
       </div>
       <div className="product-cards">
         {products.map((product, index) => (
