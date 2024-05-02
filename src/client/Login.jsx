@@ -8,7 +8,6 @@ const Login = ({ users }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [moveLeft, setMoveLeft] = useState(false);
 
-  // Check if user is logged in on component mount
   useEffect(() => {
     const isAuthenticated = localStorage.getItem('isAuthenticated');
     if (isAuthenticated === 'true') {

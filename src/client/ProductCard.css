@@ -1,8 +1,8 @@
-
-
 .product-card {
+    color: rgba(0, 0, 0, 0.8);
     background-color: #130d0d;
-    width: 200px;
+    width: 250px;
+    font-size: 17px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(255, 255, 255, 1);
@@ -12,15 +12,14 @@
     transform: translateY(5px);
     margin-top: 30px;
     border: 1px solid #3c6df1;
-    background-image: url('card-back.jpg');
+    background-image: url('https://img.freepik.com/free-vector/simple-blue-blank-background-vector-business_53876-175425.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=ais');
     background-size: cover;
     background-position: center;
 }
 
-
 .product-card img {
     border-radius: 5px;
-    border: 5px solid #1121af;
+    border: 2px solid #4c5ad3;
 }
 
 .product-card:hover {
@@ -29,11 +28,11 @@
 }
 
 .product-card h3 {
-    color: #fff;
-    font-size: 18px;
+    color: #0f4996;
+    font-size: 20px;
     margin-bottom: 10px;
+    text-decoration: underline;
 }
-
 
 .search {
     display: flex;
@@ -69,7 +68,6 @@
     margin-left: 1rem;
 }
 
-
 .search select {
     padding: 10px;
     border: 1px solid #ccc;
@@ -81,32 +79,26 @@
 }
 
 .product-cards {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 @media (max-width: 1260px) {
     .product-cards {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 60px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 750px) {
     .product-cards {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 60px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 556px) {
     .product-cards {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 60px;
         justify-content: center;
         align-items: center;
     }

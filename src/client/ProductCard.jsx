@@ -1,16 +1,27 @@
-// ProductCard.jsx
 import React from 'react';
 import './ProductCard.css';
 
-const ProductCard = ({ website, productName, brand, imageUrl, price }) => {
-  return (
+const ProductCard = ({ website, productName, brand, imageUrl, priceAmazon, priceFlipkart, priceBigbasket , website_a, website_f, website_b}) => {
+
+
+
+  const flipkartProduct = (
+ 
     <div className="product-card">
-      <h3>{website}</h3>
+      {/* <h3>From Flipkart</h3> */}
       <img src={imageUrl} alt={productName} width={150} height={150}/>
       <p style={{fontWeight: 'bold'}}>{productName}</p>
-      <p>Brand: {brand}</p>
-      <p>Price: {price}</p>
+      <p style={{fontWeight: '500'}}>{brand}</p>
+       <a href={website_a}><p style={{fontWeight: 'bold'}}>Amazon : ₹{priceAmazon}</p></a>
+      <a href={website_f}><p style={{fontWeight: 'bold'}}>Flipkart : ₹{priceFlipkart}</p></a>
+      <a href={website_b}><p style={{fontWeight: 'bold'}}>Big Basket : ₹{priceBigbasket}</p></a>
     </div>
+  );
+
+  return (
+    <>
+      {flipkartProduct}
+    </>
   );
 };
 
