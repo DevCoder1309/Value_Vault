@@ -1,6 +1,9 @@
+// Home.jsx
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './Home.css';
 import ProductCard from './ProductCard';
+import Logout from './Logout';
+import Navbar from './Navbar';
 
 const Home = () => {
   const [query, setQuery] = useState('');
@@ -36,15 +39,17 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1>Grocery Product Search</h1>
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Enter product name"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button onClick={handleSearch}>Search</button>
+      <div className="search-container">
+        <h1>Grocery Product Search</h1>
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Enter product name"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button onClick={handleSearch}>Search</button>
+        </div>
       </div>
       <div className="product-cards">
         {products.map(product => (
@@ -62,6 +67,8 @@ const Home = () => {
           />
         ))}
       </div>
+      <Logout />
+      <Navbar />
     </div>
   );
 };

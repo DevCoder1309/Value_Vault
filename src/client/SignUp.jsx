@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './SignUp.css';
-import Home from './Home'; 
+import MainPage from './MainPage';
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -56,7 +56,7 @@ const SignUp = () => {
   };
 
   if (signedUp) {
-    return <Home />;
+    return <MainPage />;
   }
 
   return (

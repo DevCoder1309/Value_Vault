@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Login.css';
 import SignUp from './SignUp';
-import Home from './Home';
+import MainPage from './MainPage';
 
 const Login = ({ users }) => {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -38,7 +38,7 @@ const Login = ({ users }) => {
   };
 
   if (isLoggedIn) {
-    return <Home />;
+    return <MainPage />;
   }
 
   return (
