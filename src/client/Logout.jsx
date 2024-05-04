@@ -9,9 +9,7 @@ const Logout = () => {
   };
 
   return (
-    <div className="logout-container">
-      <button onClick={handleLogout} id='logout-button'>Logout</button>
-    </div>
+      <button onClick={handleLogout}>Logout</button>
   );
 };
 
