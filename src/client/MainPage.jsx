@@ -4,7 +4,7 @@ import axios from 'axios';
 import ProductCard from './ProductCard';
 import Home from './Home';
 import Navbar from './Navbar';
-import './MainPage.css'; 
+//import './MainPage.css'; 
 
 const MainPage = () => {
   const [randomProducts, setRandomProducts] = useState([]);
