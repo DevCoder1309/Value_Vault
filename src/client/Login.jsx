@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Login.css';
 import SignUp from './SignUp';
 import MainPage from './MainPage';
 
@@ -42,33 +41,36 @@ const Login = ({ users }) => {
   }
 
   return (
-    <div className={`login-container ${moveLeft ? 'move-left' : ''}`}>
+    <div className="flex justify-center items-center">
       {showSignUp ? (
         <SignUp users={users} />
       ) : (
-        <div className="login-card">
-          <h2>Login</h2>
+        <div className="bg-indigo-300 rounded-xl p-16 shadow-lg shadow-black text-indigo-900">
+          <h2 className='font-bold mb-6 text-2xl uppercase'>Join Us</h2>
           <form onSubmit={handleSubmit}>
-            <div className="input-group">
-              <label htmlFor="username">Username</label>
+            <div className="mb-3">
+              <label htmlFor="username" className='block'>Username</label>
               <input
                 type="text"
                 id="username"
                 name="username"
+                className='rounded text-white p-2 mb-3'
               />
             </div>
-            <div className="input-group">
-              <label htmlFor="password">Password</label>
+            <div className="mb-3">
+              <label htmlFor="password" className='block'>Password</label>
               <input
                 type="password"
                 id="password"
                 name="password"
+                className='rounded text-white p-2 mb-3'
               />
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" onClick={handleSubmit} className='w-32 p-2 uppercase rounded-lg text-sm font-bold bg-indigo-500 border-indigo-700 text-indigo-200
+            hover:bg-indigo-900 transition duration-300 ease-in-out'>Login</button>
           </form>
           <br />
-          <a href="#" onClick={handleSignUpClick}>Don't have an account?</a>
+          <a href='#' onClick={handleSignUpClick} className='font-extrabold'>Don't have an account?</a>
         </div>
       )}
     </div>
