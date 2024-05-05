@@ -5,7 +5,7 @@
     font-size: 17px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
     padding: 25px;
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -18,7 +18,7 @@
 }
 
 .product-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 1);
     transform: translateY(-5px);
     background-color: #4c5ad3;
 }

@@ -1,12 +1,10 @@
-// Home.jsx
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
-import Logout from './Logout';
-import Navbar from './Navbar';
 
 const Home = () => {
   const [query, setQuery] = useState('');
   const [products, setProducts] = useState([]);
+  const [searched, setSearched] = useState(false);
 
   useEffect(() => {
     const savedQuery = localStorage.getItem('searchQuery');
@@ -29,6 +27,7 @@ const Home = () => {
           new RegExp(searchQuery.split('').join('.*'), 'i').test(product.name.toLowerCase())
         );
         setProducts(filteredProducts);
+        setSearched(true);
 
         localStorage.setItem('searchQuery', query);
         localStorage.setItem('searchResults', JSON.stringify(filteredProducts));
@@ -51,6 +50,9 @@ const Home = () => {
           <button onClick={handleSearch} className='p-3 w-24 rounded-lg bg-indigo-300 hover:bg-indigo-900 hover:text-indigo-100' >Search</button>
         </div>
       </div>
+      {searched && products.length === 0 && (
+        <p className="text-3xl uppercase font-prim font-bold" style={{marginLeft: '32.5rem', marginTop: '5rem'}}>No match found</p>
+      )}
       <div className="product-cards">
         {products.map(product => (
           <ProductCard
@@ -67,7 +69,6 @@ const Home = () => {
           />
         ))}
       </div>
-
     </div>
   );
 };

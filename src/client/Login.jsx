@@ -32,7 +32,7 @@ const Login = ({ users }) => {
       setIsLoggedIn(true);
       localStorage.setItem('isAuthenticated', 'true'); 
     } else {
-      console.log('Invalid username or password');
+      alert('Invalid username or password');
     }
   };
 
@@ -41,7 +41,7 @@ const Login = ({ users }) => {
   }
 
   return (
-      <div className="min-h-screen flex justify-center items-center bg-transparent bg-cover font-prim" style={{ backgroundImage: 'url(/grocery-store.jpg)'}}>
+      <div className="min-h-screen flex justify-center items-center bg-transparent bg-cover font-prim" style={{ backgroundImage: 'url(grocery-store.jpg)'}}>
       {showSignUp ? (
         <SignUp users={users} />
       ) : (
@@ -54,7 +54,7 @@ const Login = ({ users }) => {
                 type="text"
                 id="username"
                 name="username"
-                className='rounded text-white p-2 mb-3'
+                className="rounded p-1 bg-white text-gray-800" 
               />
             </div>
             <div className="mb-3">
@@ -63,7 +63,7 @@ const Login = ({ users }) => {
                 type="password"
                 id="password"
                 name="password"
-                className='rounded text-white p-2 mb-3'
+                className="rounded p-1 bg-white text-gray-800" 
               />
             </div>
             <button type="submit" className='w-32 p-2 uppercase rounded-lg text-sm font-bold bg-indigo-500 border-indigo-700 text-indigo-200 hover:bg-indigo-900 transition duration-300 ease-in-out'>Login</button>
