@@ -66,8 +66,7 @@ const Login = ({ users }) => {
                 className='rounded text-white p-2 mb-3'
               />
             </div>
-            <button type="submit" onClick={handleSubmit} className='w-32 p-2 uppercase rounded-lg text-sm font-bold bg-indigo-500 border-indigo-700 text-indigo-200
-            hover:bg-indigo-900 transition duration-300 ease-in-out'>Login</button>
+            <button type="submit" className='w-32 p-2 uppercase rounded-lg text-sm font-bold bg-indigo-500 border-indigo-700 text-indigo-200 hover:bg-indigo-900 transition duration-300 ease-in-out'>Login</button>
           </form>
           <br />
           <a href='#' onClick={handleSignUpClick} className='font-extrabold'>Don't have an account?</a>
