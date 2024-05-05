@@ -1,6 +1,5 @@
 // Home.jsx
 import React, { useState, useEffect } from 'react';
-import './Home.css';
 import ProductCard from './ProductCard';
 import Logout from './Logout';
 import Navbar from './Navbar';
@@ -38,17 +37,18 @@ const Home = () => {
   };
 
   return (
-    <div className="home-container">
-      <div className="search-container">
-        <h1>Grocery Product Search</h1>
-        <div className="search">
+    <div className='py-20'>
+      <div className="flex flex-col justify-center items-center gap-20">
+        <h1 className='text-2xl'>Grocery Product Search</h1>
+        <div className="flex justify-center items-center gap-20">
           <input
             type="text"
             placeholder="Enter product name"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            className='w-96 p-3 rounded-lg text-indigo-800'
           />
-          <button onClick={handleSearch}>Search</button>
+          <button onClick={handleSearch} className='p-3 w-24 rounded-lg bg-indigo-300 hover:bg-indigo-900 hover:text-indigo-100' >Search</button>
         </div>
       </div>
       <div className="product-cards">
@@ -67,8 +67,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <Logout />
-      <Navbar />
+
     </div>
   );
 };
