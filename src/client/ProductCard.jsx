@@ -7,7 +7,7 @@ const ProductCard = ({ website, productName, brand, imageUrl, priceAmazon, price
 
   const flipkartProduct = (
  
-    <div className="product-card">
+    <div className="product-card" style={{marginTop: "8rem"}}>
       {/* <h3>From Flipkart</h3> */}
       <img src={imageUrl} alt={productName} width={150} height={150}/>
       <p style={{fontWeight: 'bold'}}>{productName}</p>
