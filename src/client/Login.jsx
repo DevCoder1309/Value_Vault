@@ -41,7 +41,7 @@ const Login = ({ users }) => {
   }
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center bg-indigo-500">
       {showSignUp ? (
         <SignUp users={users} />
       ) : (

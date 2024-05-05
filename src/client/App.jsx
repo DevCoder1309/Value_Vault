@@ -2,8 +2,6 @@
 import axios from 'axios';
 import Login from "./Login";
 import '../index.css';
-import MainPage from "./MainPage";
-import './style.css'
 import { useState, useEffect } from "react";
 function App() {
   const [users, setUsers] = useState([])
@@ -13,10 +11,10 @@ function App() {
     .catch(err => console.log(err))
   }, [])
   return (
-  //  <>
-  //    <Login users={users}/>
-  //  </>
-    <MainPage/>
+    <>
+     <Login users={users}/>
+    </>
+
   )
 }
 

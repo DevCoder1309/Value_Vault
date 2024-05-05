@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import './Navbar.css';
 import Logout from './Logout';
 
 const Navbar = () => {

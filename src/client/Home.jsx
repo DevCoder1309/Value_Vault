@@ -46,7 +46,7 @@ const Home = () => {
             placeholder="Enter product name"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className='w-96 p-3 rounded-lg text-indigo-100'
+            className='w-96 p-3 rounded-lg text-indigo-800'
           />
           <button onClick={handleSearch} className='p-3 w-24 rounded-lg bg-indigo-300 hover:bg-indigo-900 hover:text-indigo-100' >Search</button>
         </div>
