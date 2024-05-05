@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MainPage from './MainPage';
+import Login from './Login';
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -10,6 +11,7 @@ const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [signedUp, setSignedUp] = useState(false);
   const [users, setUsers] = useState([])
+  const [showLogin, setShowLogin] = useState(false);
 
   useEffect(() => {
     axios.get('http://localhost:3000/home')
@@ -18,6 +20,12 @@ const SignUp = () => {
       })
       .catch(err => console.log(err));
   }, []);
+
+  const handleBack = () => {
+    setTimeout(() => {
+      setShowLogin(true);
+    }, 0);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,6 +68,9 @@ const SignUp = () => {
 
   return (
     <div className="flex justify-center items-center">
+      {showLogin ? (
+        <Login users={users} />
+      ) : (
       <div className="bg-indigo-300 rounded-xl p-14 shadow-lg shadow-black text-indigo-900">
         <h2 className="font-bold mb-6 text-2xl uppercase">Sign Up</h2>
         <form onSubmit={handleSubmit}>
@@ -123,9 +134,11 @@ const SignUp = () => {
           </button>
         </form>
         <br />
-        <a href="#" onClick={handleSubmit} className="font-bold">Already have an account?</a>
+        <a href="#" onClick={handleBack} className="font-bold">Already have an account?</a>
       </div>
-    </div>
+      )}
+   </div>
+      
   );
 };
 
