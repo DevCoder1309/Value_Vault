@@ -1,30 +1,61 @@
 .product-card {
-    color: rgba(0, 0, 0, 0.8);
-    background-color: #130d0d;
+    color: #fff;
+    background-color: #6db1ff;
     width: 250px;
     font-size: 17px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(255, 255, 255, 1);
-    padding: 20px;
+    padding: 25px;
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     transform: translateY(5px);
     margin-top: 30px;
     border: 1px solid #3c6df1;
-    background-image: url('https://img.freepik.com/free-vector/simple-blue-blank-background-vector-business_53876-175425.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=ais');
     background-size: cover;
     background-position: center;
-}
-
-.product-card img {
-    border-radius: 5px;
-    border: 2px solid #4c5ad3;
+    text-align: center;
 }
 
 .product-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
     transform: translateY(-5px);
+    background-color: #4c5ad3;
+}
+
+.product-card img {
+    border-radius: 5px;
+    border: 2px solid #4c5ad3;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card a {
+    color: #0544f3;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    color: #36a2eb;
+    /* Blue */
+    font-weight: bold;
+}
+
+.product-card p {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .product-card h3 {
@@ -32,57 +63,6 @@
     font-size: 20px;
     margin-bottom: 10px;
     text-decoration: underline;
-}
-
-.search {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.search input {
-    flex: 1;
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid #2a49d4;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    font-size: 14px;
-}
-
-.home-container {
-    max-width: 100%;
-    padding: 10px;
-}
-
-.search button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    margin-left: 1rem;
-}
-
-.search select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin-left: 1rem;
-    cursor: pointer;
-    font-size: 15px;
-    border: 1px solid #2a49d4;
-}
-
-.product-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
 }
 
 @media (max-width: 1260px) {

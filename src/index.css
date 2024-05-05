@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
 
-  @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+  
 
   .hoverAll{
     @apply hover:text-indigo-500 transition-colors duration-500 ease-in-out cursor-pointer shadow-lg

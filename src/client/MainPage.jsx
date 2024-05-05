@@ -1,7 +1,6 @@
   import React, { useState, useEffect } from 'react';
   import { ReactTyped } from 'react-typed';
   import axios from 'axios';
-  import ProductCard from './ProductCard';
   import Home from './Home';
   import Navbar from './Navbar';
 
@@ -22,7 +21,7 @@
     return (
       <div className='min-h-screen'>
         <Navbar />
-      <div className="bg-cover" style={{ backgroundImage: 'url(../public/grocery-store.jpg)'}}>
+      <div className="bg-cover" style={{ backgroundImage: 'url(grocery-store.jpg)', backgroundSize: 'contain'}}>
 
         <div className="flex flex-col justify-center items-center gap-7 min-h-screen">
           <h1 className="font-extrabold">
