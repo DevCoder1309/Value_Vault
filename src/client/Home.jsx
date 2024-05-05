@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <div className='py-20'>
       <div className="flex flex-col justify-center items-center gap-20">
-        <h1 className='text-2xl'>Grocery Product Search</h1>
+        <h1 className='text-3xl uppercase font-prim font-bold'>Grocery Product Search</h1>
         <div className="flex justify-center items-center gap-20">
           <input
             type="text"

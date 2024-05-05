@@ -41,12 +41,12 @@ const Login = ({ users }) => {
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-indigo-500">
+      <div className="min-h-screen flex justify-center items-center bg-transparent bg-cover font-prim" style={{ backgroundImage: 'url(/grocery-store.jpg)'}}>
       {showSignUp ? (
         <SignUp users={users} />
       ) : (
         <div className="bg-indigo-300 rounded-xl p-16 shadow-lg shadow-black text-indigo-900">
-          <h2 className='font-bold mb-6 text-2xl uppercase'>Join Us</h2>
+          <h2 className='font-extrabold mb-6 text-3xl uppercase text-center'>Join Us</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="username" className='block'>Username</label>
@@ -69,7 +69,7 @@ const Login = ({ users }) => {
             <button type="submit" className='w-32 p-2 uppercase rounded-lg text-sm font-bold bg-indigo-500 border-indigo-700 text-indigo-200 hover:bg-indigo-900 transition duration-300 ease-in-out'>Login</button>
           </form>
           <br />
-          <a href='#' onClick={handleSignUpClick} className='font-extrabold'>Don't have an account?</a>
+          <a href='#' onClick={handleSignUpClick} className='font-extrabold font-prim'>Don't have an account?</a>
         </div>
       )}
     </div>
