@@ -9,7 +9,7 @@ const Logout = () => {
   };
 
   return (
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={handleLogout} className='uppercase font-bold hoverAll'>Logout</button>
   );
 };
 

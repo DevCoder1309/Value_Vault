@@ -67,12 +67,12 @@ const SignUp = () => {
   }
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center bg-transparent bg-cover font-prim" style={{ backgroundImage: 'url(../public/grocery-store.jpg)' }}>
       {showLogin ? (
         <Login users={users} />
       ) : (
-      <div className="bg-indigo-300 rounded-xl p-14 shadow-lg shadow-black text-indigo-900">
-        <h2 className="font-bold mb-6 text-2xl uppercase">Sign Up</h2>
+      <div className="bg-indigo-300 rounded-xl p-14 text-indigo-900">
+        <h2 className="font-extrabold mb-6 text-2xl uppercase text-center">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block">Name</label>

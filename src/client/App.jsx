@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import Login from "./Login";
-import '../index.css';
+import MainPage from './MainPage';
 import { useState, useEffect } from "react";
 function App() {
   const [users, setUsers] = useState([])
@@ -14,6 +14,8 @@ function App() {
     <>
      <Login users={users}/>
     </>
+
+
 
   )
 }

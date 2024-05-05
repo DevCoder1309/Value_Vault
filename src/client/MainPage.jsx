@@ -20,23 +20,26 @@
     }, []);
 
     return (
-      <div className=" bg-indigo-600 min-h-screen">
+      <div className='min-h-screen'>
         <Navbar />
+      <div className="bg-cover" style={{ backgroundImage: 'url(../public/grocery-store.jpg)'}}>
+
         <div className="flex flex-col justify-center items-center gap-7 min-h-screen">
           <h1 className="font-extrabold">
             <ReactTyped
               strings={['Value Vault']}
               typeSpeed={50}
               showCursor={false}
-              className='text-7xl'
+              className='text-7xl uppercase font-extrabold hoverAll'
             />
           </h1>
-          <p className="text-xl mt-8">Savings Only</p>
+          <p className="text-3xl font-prim uppercase font-extrabold hoverAll">For Savings</p>
         </div>
 
-        <div className="mt-24">
+        <div className="mt-24 bg-indigo-500">
           <Home />
         </div>
+      </div>
       </div>
     );
   };
