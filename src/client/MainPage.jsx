@@ -9,15 +9,15 @@
   const MainPage = () => {
     const [randomProducts, setRandomProducts] = useState([]);
 
-  //  useEffect(() => {
-  //    axios.get('http://localhost:3000/products')
-  //      .then(response => {
-  //        setRandomProducts(response.data);
-  //      })
-  //      .catch(error => {
-  //        console.error('Error fetching random products:', error);
-  //      });
-  //  }, []);
+    useEffect(() => {
+      axios.get('http://localhost:3000/products')
+        .then(response => {
+          setRandomProducts(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching random products:', error);
+        });
+    }, []);
 
     return (
       <div className=" bg-indigo-600 min-h-screen">
